@@ -1,4 +1,4 @@
-"""Train DICE-SPCL and extract the fused shared representations."""
+"""Train NAG-MVC and extract the fused shared representations."""
 from __future__ import annotations
 import argparse
 import csv
@@ -21,12 +21,12 @@ def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 def _load_torch():
     try:
         import torch
-        from .model import DICESPCL, dice_loss
+        from .model import NAGMVC, nag_mvc_loss
     except ModuleNotFoundError as exc:
         raise RuntimeError(
-            "DICE-SPCL requires PyTorch. Activate a Python environment with torch installed."
+            "NAG-MVC requires PyTorch. Activate a Python environment with torch installed."
         ) from exc
-    return torch, DICESPCL, dice_loss
+    return torch, NAGMVC, nag_mvc_loss
 
 def _train_seed(
     x: np.ndarray,

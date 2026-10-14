@@ -1,4 +1,4 @@
-"""DICE-SPCL encoders, neighborhood-weighted view fusion, and training losses."""
+"""NAG-MVC encoders, neighborhood-weighted view fusion, and training losses."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ class MLP(nn.Module):
         return self.net(x)
 
 
-class DICESPCL(nn.Module):
+class NAGMVC(nn.Module):
     """View-specific shared and private encoders with weighted shared fusion.
 
     Projection heads align shared representations across views; decoders
@@ -118,7 +118,7 @@ def redundancy_reduction(fused: torch.Tensor, eps: float = 1e-4) -> torch.Tensor
     return diagonal + 0.005 * off_diagonal.pow(2).mean()
 
 
-def dice_loss(
+def nag_mvc_loss(
     outputs: dict[str, torch.Tensor],
     x: torch.Tensor,
     pair_reliability: torch.Tensor,

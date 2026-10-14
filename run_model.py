@@ -1,11 +1,11 @@
-"""Train DICE-SPCL and cluster the final representations using the configured K."""
+"""Train NAG-MVC and cluster the final representations using the configured K."""
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 import json
 import numpy as np
 from sklearn.cluster import KMeans
-from dice_spcl.features import prepare_features, compute_subject_discordance, assemble_representation
-from dice_spcl.training import _train_seed
+from nag_mvc.features import prepare_features, compute_subject_discordance, assemble_representation
+from nag_mvc.training import _train_seed
 
 
 def main():

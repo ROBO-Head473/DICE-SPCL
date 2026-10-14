@@ -1,6 +1,8 @@
-# DICE-SPCL main-model code
+# NAG-MVC main-model code
 
-Main-model code for **DICE-SPCL: Multiview Clustering of Patients With Major Depressive Disorder Using Resting-State fMRI**.
+**NAG-MVC** stands for **Neighborhood Agreement-Guided Multiview Clustering**.
+
+Main-model code for **NAG-MVC: Multiview Clustering of Patients With Major Depressive Disorder Using Resting-State fMRI**.
 
 ## Quick start
 
@@ -8,7 +10,7 @@ Use Python 3.10. Run from the repository root:
 
 ```bash
 python -m pip install -r requirements.txt
-python run_model.py --demo --device cpu --out-dir ../dice_spcl_demo_output
+python run_model.py --demo --device cpu --out-dir ../nag_mvc_demo_output
 ```
 
 ## Your data

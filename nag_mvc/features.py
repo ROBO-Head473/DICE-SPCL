@@ -44,7 +44,7 @@ def compute_subject_discordance(
 
     n_samples, n_views, _ = x.shape
     if n_samples < 4:
-        raise ValueError("DICE-SPCL needs at least four MDD participants.")
+        raise ValueError("NAG-MVC needs at least four MDD participants.")
     k = min(max(2, n_neighbors), n_samples - 1)
     neighbor_sets: list[list[set[int]]] = []
     for view in range(n_views):
