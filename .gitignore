@@ -1,0 +1,37 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Input data, checkpoints and generated results
+data/
+outputs/
+results/
+seed_*/
+*.npz
+*.npy
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.joblib
+*.nii
+*.nii.gz
+*.dcm
+*.mat
+*.h5
+*.hdf5
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.log
+run_config.json
